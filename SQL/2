@@ -1,0 +1,11 @@
+#https://www.hackerrank.com/challenges/the-pads/problem?isFullScreen=true
+Select CASE WHEN Occupation='Doctor' then CONCAT(NAME,'(D)')
+WHEN Occupation='ACTOR'  then CONCAT(NAME,"(A)") 
+WHEN Occupation='Singer'  then CONCAT(NAME,"(S)") 
+WHEN Occupation='Professor' then CONCAT(NAME,"(P)") 
+END AS NAME_T FROM OCCUPATIONS
+oRDER BY NAME;
+sELECT concat ("There are a total of"," ",count(*)," ",lower(occupation),"s.")
+From Occupations
+group by occupation
+order by count(*) asc,occupation asc;
