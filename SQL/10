@@ -1,0 +1,5 @@
+#https://www.hackerrank.com/challenges/weather-observation-station-2/problem?isFullScreen=true
+SELECT 
+    cast((SUM(LAT_N)) AS decimal(10,2)) as lat,
+    cast((SUM(LONG_W)) AS decimal(10,2)) as lon
+FROM STATION;
